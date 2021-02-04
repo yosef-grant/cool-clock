@@ -1,0 +1,17 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "Visually Interesting Clock with Full Date",
+  "main": "clock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "date",
+    "function",
+    "clock"
+  ],
+  "author": "Y Grant",
+  "license": "ISC"
+}

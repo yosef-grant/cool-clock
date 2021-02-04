@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/ico" href="./assets/favicon/Paomedia-Small-N-Flat-Clock.ico">
+    <title>Clock</title>
+  </head>
+  <body>
+  
+    <div class="container">
+      <video src="./assets/background/pexels-james-cheney-6471377.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="date">
+        <div id="day"></div>
+        <div id="month"></div>
+        <div id="year"></div>
+      </div>
+      <hr />
+      <div class="time-wrapper">
+      <div class="section">
+        <div id="hours-progress" class="time">
+          <div id="hours"></div>
+          <h3>Hours</h3>
+        </div>
+      </div>
+      <div class="section">
+        <div id="minutes-progress" class="time">
+          <div id="minutes"></div>
+          <h3>Minutes</h3>
+        </div>
+      </div>
+      <div class="section">
+        <div id="seconds-progress" class="time">
+          <div id="seconds"></div>
+          <h3>Seconds</h3>
+        </div>
+      </div>
+    </div>
+      <div id="time-of-day" class="morning-night section">
+        <div id="tod"></div>
+      </div>
+    </div>
+    <script src="./clock.js"></script>
+  </body>
+</html>

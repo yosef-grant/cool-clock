@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: 'EB Garamond', serif;
+ 
+}
+
+
+
+.container {
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  max-width: 75%;
+  padding: 0px 25px;
+
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: .8;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: overlay;
+  }
+  
+  
+  hr {
+    border: 1px solid #e3e3e3;
+    height: 600px;
+    margin: 0 150px;
+    box-shadow: 0 0 2px #a7a7a7;
+  }
+  .date {
+    text-align: right;
+    text-shadow: 0 1px 5px #333333;
+    width: 100%;
+    color: #eee;
+
+    #day {
+      font-size: 6.5em;
+    }
+    #month {
+      font-family: 'Cookie', cursive;
+      font-size: 4.5em;
+      font-style: italic;
+    }
+    #year {
+      font-size: 5.5em;
+    }
+  }
+
+  .time-wrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+  }
+
+  .section {
+    background-color: rgba(27, 27, 27, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 225px;
+    width: 225px;
+    margin: 10px 20px;
+    box-shadow: 0 0 3px #292929;
+    div {
+      color: #fff;
+      font-size: 2.1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h3 {
+      font-size: 0.8em;
+      color: #eee;
+    }
+  }
+
+  .time {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.6);
+    display: flex;
+    width: 225px;
+    height: 225px;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    filter: blur(50%);
+  }
+
+  #hours-progress {
+    background: linear-gradient(#575757, #575757) content-box no-repeat,
+      conic-gradient(
+          dodgerblue var(--percentage, 0),
+          transparent var(--percentage, 0)
+        )
+        border-box;
+    --percentage: 0deg;
+  }
+
+  #minutes-progress {
+    background: linear-gradient(#575757, #575757) content-box no-repeat,
+      conic-gradient(
+          dodgerblue var(--percentage, 0),
+          transparent var(--percentage, 0)
+        )
+        border-box;
+    --percentage: 0deg;
+  }
+  #seconds-progress {
+    background: linear-gradient(#575757, #575757) content-box no-repeat,
+      conic-gradient(
+          dodgerblue var(--percentage, 0),
+          transparent var(--percentage, 0)
+        )
+        border-box;
+    --percentage: 0deg;
+  }
+  .morning-night {
+    margin-bottom: 180px;
+    background-color: #575757;
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    border: 5px solid dodgerblue;
+    img {
+      width: 40px;
+      filter: invert(100);
+    }
+  }
+}
+
+// Media Queries //
+
+@media only screen and (max-width: 1920px) {
+  .container {
+    hr {
+      height: 400px;
+      margin: 0px 120px;
+    }
+    .date {
+      #day {
+        font-size: 6.25em;
+      }
+      #month {
+        font-size: 4.25em;
+      }
+      #year {
+        font-size: 5.25em;
+      }
+    }
+    .section {
+      height: 180px;
+      width: 180px;
+      margin: 5px 12px;
+
+      div {
+        font-size: 1.8em;
+      }
+      h3 {
+        font-size: 0.9em;
+      }
+    }
+
+    .time {
+      width: 180px;
+      height: 180px;
+      border: 8.5px solid transparent;
+    }
+
+    .morning-night {
+      margin-bottom: 140px;
+      height: 50px;
+      width: 50px;
+      min-width: 50px;
+      border: 4.25px solid dodgerblue;
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    hr {
+      height: 300px;
+      margin: 0px 65px;
+    }
+    .date {
+      #day {
+        font-size: 5em;
+      }
+      #month {
+        font-size: 2.75em;
+      }
+      #year {
+        font-size: 3.85em;
+      }
+    }
+
+    .section {
+      height: 125px;
+      width: 125px;
+      margin: 5px 10px;
+
+      div {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 0.85em;
+      }
+    }
+
+    .time {
+      width: 125px;
+      height: 125px;
+      border: 7.5px solid transparent;
+    }
+
+    .morning-night {
+      margin-bottom: 90px;
+      height: 47.5px;
+      width: 47.5px;
+      min-width: 45px;
+      border: 4px solid dodgerblue;
+      img {
+        width: 28px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0px 15px;
+    hr {
+      height: 250px;
+      margin: 0px 30px;
+    }
+    .date {
+      #day {
+        font-size: 4.5em;
+      }
+      #month {
+        font-size: 2.3em;
+      }
+      #year {
+        font-size: 3.15em;
+      }
+    }
+
+    .section {
+      height: 100px;
+      width: 100px;
+
+      div {
+        font-size: 1.2em;
+      }
+      h3 {
+        font-size: 0.85em;
+      }
+    }
+
+    .time {
+      width: 100px;
+      height: 100px;
+      border: 6.5px solid transparent;
+    }
+
+    .morning-night {
+      margin-bottom: 80px;
+      height: 40px;
+      width: 40px;
+      min-width: 40px;
+      border: 3.5px solid dodgerblue;
+      img {
+        width: 26px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+
+    hr {
+      height: 0px;
+      width: 300px;
+      margin: 20px 0px;
+    }
+    .date {
+      text-align: center;
+
+      #day {
+        font-size: 4.75em;
+      }
+      #month {
+        font-size: 2.3em;
+      }
+      #year {
+        font-size: 3.25em;
+      }
+    }
+
+    .section {
+      margin: 5px 10px;
+    }
+
+    .morning-night {
+      margin-bottom: 20px;
+      height: 47.5px;
+      width: 47.5px;
+      min-width: 45px;
+      border: 3.75px solid dodgerblue;
+      img {
+        width: 28px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    hr {
+      width: 225px;
+    }
+    .date {
+      #day {
+        font-size: 3.5em;
+      }
+      #month {
+        font-size: 1.8em;
+      }
+      #year {
+        font-size: 2.5em;
+      }
+    }
+
+    .section {
+      height: 95px;
+      width: 95px;
+
+      div {
+        font-size: 1.2em;
+      }
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+
+    .time {
+      width: 95px;
+      height: 95px;
+      border: 6.5px solid transparent;
+    }
+
+    .morning-night {
+      height: 45px;
+      width: 45px;
+      min-width: 45px;
+      border: 3.5px solid dodgerblue;
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    hr {
+      width: 200px;
+      margin: 15px 0px;
+    }
+    .date {
+      #day {
+        font-size: 3em;
+      }
+      #month {
+        font-size: 1.6em;
+      }
+      #year {
+        font-size: 2.25em;
+      }
+    }
+
+    .section {
+      height: 80px;
+      width: 80px;
+      margin: 2.5px 5.5px;
+
+      div {
+        font-size: 1em;
+      }
+      h3 {
+        font-size: 0.7em;
+      }
+    }
+
+    .time {
+      width: 80px;
+      height: 80px;
+      border: 6px solid transparent;
+    }
+
+    .morning-night {
+      margin-bottom: 20px;
+      height: 40px;
+      width: 40px;
+      min-width: 40px;
+      border: 3px solid dodgerblue;
+      img {
+        width: 22.25px;
+      }
+    }
+  }
+}
