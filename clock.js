@@ -82,11 +82,11 @@ function getTime() {
 
   let dateSuffix;
 
-  if (date % 10 === 1) {
+  if ((date % 10 === 1) && (date !== 11)) {
     dateSuffix = 'st';
-  } else if (date % 10 === 2) {
+  } else if ((date % 10 === 2) && (date !== 12)) {
     dateSuffix = 'nd';
-  } else if (date % 10 === 3) {
+  } else if ((date % 10 === 3) && (date !== 13)) {
     dateSuffix = 'rd';
   } else dateSuffix = 'th';
 
